@@ -1,0 +1,105 @@
+<snippets>
+
+<!--
+  Created by Frescobaldi 3.1.2.
+
+  Every snippet is represented by:
+    title:      title text
+    shortcuts:  list of shortcut elements, every shortcut is a key sequence
+    body:       the snippet text
+
+  The snippet id attribute can be the name of a builtin snippet or a random
+  name like 'n123456'. In the latter case, the title is used to determine
+  whether a snippet is new or updated.
+-->
+
+<snippet id="n665384">
+<title>coda como marca de ensayo</title>
+<shortcuts />
+<body>-*- menu: music;
+\mark \markup { \musicglyph #"scripts.coda" } 
+</body>
+</snippet>
+
+<snippet id="n364560">
+<title>encerrar texto seleccionado en marca de ensayo moderna</title>
+<shortcuts />
+<body>-*- menu: blocks;
+\mark \markup { \box { $SELECTION }}</body>
+</snippet>
+
+<snippet id="n338774">
+<title>hoja guía mel midi import</title>
+<shortcuts />
+<body>-*- template; indent: no;
+${ANCHOR}\version "2.20.0"
+
+\header {
+  title = "melancolía"
+}
+
+global = {
+  \time 6/8
+  \key a \major
+  \tempo 4=100
+  \set maximumFretStretch = 10
+}
+
+chordNames = \chordmode {
+  \global
+  
+}
+melody = \relative c'' {
+  \global
+   
+   \bar "|."
+}
+
+words = \lyricmode {
+ 
+}
+
+\score {
+  &lt;&lt;
+    \new ChordNames \chordNames
+    \new FretBoards \chordNames
+    \new Staff { \melody }
+    \addlyrics { \words }
+  &gt;&gt;
+    \layout { \context { \Staff \remove "Note_heads_engraver"
+    \consists "Completion_heads_engraver"
+        \remove "Rest_engraver"
+    \consists "Completion_rest_engraver" 
+}}
+  \midi { }
+}
+${CURSOR}</body>
+</snippet>
+
+<snippet id="n466944">
+<title>indicar agrupación de pulsos</title>
+<shortcuts />
+<body>-*- menu: music;
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = #'( 3 $CURSOR 2 )
+</body>
+</snippet>
+
+<snippet id="n734916">
+<title>mover marca  de ensayo</title>
+<shortcuts />
+<body>-*- menu: blocks;
+\override Score.RehearsalMark.extra-offset = #'(0 . 9)
+</body>
+</snippet>
+
+<snippet id="n082251">
+<title>repeticiones con varios finales alternos flexibles</title>
+<shortcuts>
+<shortcut>Ctrl+Alt+R</shortcut>
+</shortcuts>
+<body>-*- menu: blocks; name: rfx
+          \bar ".|:" $SELECTION \set Score.repeatCommands = #'((volta "1. 2. 3.")) c1 \bar ":|." \set Score.repeatCommands = #'((volta #f)) \set Score.repeatCommands = #'((volta "4")) c1 \set Score.repeatCommands = #'((volta #f))  \break</body>
+</snippet>
+
+</snippets>
