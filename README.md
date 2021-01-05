@@ -14,7 +14,7 @@ You will need to have installed lilypond and frescobaldi before being able to  i
 
 ## contents and explanation (usage) of each snipet
 
-This project contains an xml file of for now six (6) snipets which can be imported directly into the snipet manager for frescobaldi. Current snipets are named in Spanish, but I could make a version with English names if desired or needed. These are:
+This project contains an xml file of for now six (6) snipets which can be imported directly into the snipet manager for frescobaldi. All of them will appear in the code fragments (insert menu, accessed by pressing alt plus i in the main window) of frescobaldi, except the template which will appear on the second "new" item on the file menu, effectively as a template. Current snipets are named in Spanish, but I could make a version with English names if desired or needed. These are:
 
 * coda as a rehearsal mark: Puts a coda symbol into a markup text instruction where the edit cursor is currently located. You can substitute the word coda inside the code for segno or any other musical symbol you might need.
 * enclose selected text into modern rehearsal mark: This just puts a markup block and a box block around the selected text at the edit cursor. This is done because normally, boxes around letters which indicate a song section such as A, B, and so on are seen more clearly by  sighted musicians.
@@ -43,7 +43,7 @@ Necesitarás haber instalado lilypond y frescobaldi antes de poder importar el a
 
 ## contenido y explicación (uso) de cada snipet
 
-Este proyecto contiene un archivo xml de por ahora seis (6) fragmentos que se pueden importar directamente en el gestor de fragmentos de código de frescobaldi. Los snipets actuales se nombran en español, pero podría hacer una versión con nombres en inglés si se desea o es necesario. Estos son:
+Este proyecto contiene un archivo xml de por ahora seis (6) fragmentos que se pueden importar directamente en el gestor de fragmentos de código de frescobaldi. Todos, excepto la plantilla, aparecerán en el menú Fragmentos de código , (o también llamado insertar, accediendo presionando más i latina en la ventana principal de frescobaldi), y el último fragmento aparecerá bajo el menú archivo, en el submenú de nuevo como una plantilla. Los snipets actuales se nombran en español, pero podría hacer una versión con nombres en inglés si se desea o es necesario. Estos son:
 
 * coda como marca de ensayo: coloca un símbolo de coda en una instrucción de texto de marcado donde se encuentra actualmente el cursor de edición. Se puede sustituir la palabra coda por segno o cualquier otro síbmolo musical que se necesite dentro del código generado.
 * encerrar el texto seleccionado en una marca de ensayo moderna: Esto solo coloca un bloque de marcado y un bloque de cuadro alrededor del texto seleccionado en el cursor de edición. Esto se hace porque normalmente, las cajas alrededor de las letras que indican una sección de canción como A, B, y así sucesivamente se entienden más claramente por músicos que ven.
