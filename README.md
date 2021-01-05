@@ -2,7 +2,7 @@
 
 ## purpose and a little background
 
-I am a blind musician. After almost 12 years of using lilypond, starting with university musical work, I finally found that frescobaldi is the best choice for managing, creating and editing lilypond documents. As of 2021, Almost every feature of this program is accessible. I am sharing a personally crafted collection of such snipets in hopes of making coding easier for some commonly needed tasks mainly regarding visual tweaks that might be needed when finalizing or creating a score. The xml file might be downloaded using the table above where the files for this project are located.
+I am a blind musician. After almost 12 years of using lilypond, starting with university musical work, I finally found that frescobaldi is the best choice for managing, creating and editing lilypond documents. As of 2021, Almost every feature of this program is accessible. I am sharing a personally crafted collection of such snipets in hopes of making coding easier for some commonly needed tasks mainly regarding visual tweaks and common practices used for jazz, lead sheets and popular music notation that might be needed when finalizing or creating a score. The xml file might be downloaded using the table above where the files for this project are located.
 
 ### who is this for?
 
@@ -16,7 +16,7 @@ You will need to have installed lilypond and frescobaldi before being able to  i
 
 This project contains an xml file of for now six (6) snipets which can be imported directly into the snipet manager for frescobaldi. Current snipets are named in Spanish, but I could make a version with English names if desired or needed. These are:
 
-* coda as a rehearsal mark: Puts a coda symbol into a markup text instruction where the edit cursor is currently located.
+* coda as a rehearsal mark: Puts a coda symbol into a markup text instruction where the edit cursor is currently located. You can substitute the word coda inside the code for segno or any other musical symbol you might need.
 * enclose selected text into modern rehearsal mark: This just puts a markup block and a box block around the selected text at the edit cursor. This is done because normally, boxes around letters which indicate a song section such as A, B, and so on are seen more clearly by  sighted musicians.
 * Midi importing of melodies for leadsheets: This is a lilypond template. It has the term midi in it because it uses the completion heads engraver, so that notes that run off at the end of the  bar are tied automatically, but unfortunately this does not work well at all. Still, it includes sections for typing in chords, a melody and lyrics so it can be used to create lead sheets on the fly. 
 * indicate custom note pulse beaming or grouping: this is just a way to save typing, so that the cursor is placed where you would put the numbers in the parenthesis of the lilypond code, such as 3 2. For example, this grouping is commonly used in Venezuelan Merengue which has a compound five eighths time signature, in which the first pulse has three eighth notes and the second pulse has 2.
@@ -31,7 +31,7 @@ all of the tweaks here are from the [lilypond snipet repository](http://lsr.di.u
 
 ## propósito de esto y un poco de historia
 
-Soy un músico ciego. Después de casi 12 años de usar lilypond, empezando con trabajo musical universitario, finalmente encontré que frescobaldi es la mejor opción para gestionar, crear y editar documentos de lilypond. A partir de 2021, casi todas las características de este programa son accesibles. Estoy compartiendo una colección hecha a mano personalmente de estos fragmentos de código con la esperanza de hacer que la codificación sea más fácil para algunas tareas comúnmente necesarias para afinar ajustes visuales alfinalizar o crearse una partitura. El archivo xml que contiene los fragmentos se puede descargar usando la tabla que muestra los archivos para el proyecto.
+Soy un músico ciego. Después de casi 12 años de usar lilypond, empezando con trabajo musical universitario, finalmente encontré que frescobaldi es la mejor opción para gestionar, crear y editar documentos de lilypond. A partir de 2021, casi todas las características de este programa son accesibles. Estoy compartiendo una colección hecha a mano personalmente de estos fragmentos de código con la esperanza de hacer que la codificación sea más fácil para algunas tareas comúnmente necesarias para afinar ajustes visuales al finalizar o crearse una partitura. Estos fragmentos también incluyen prácticas o técnicas comunes que son utilizadas en jazz, hojas guía o partituras de música popular. El archivo xml que contiene los fragmentos se puede descargar usando la tabla que muestra los archivos para el proyecto.
 
 ##  ¿Para quién es esto?
 
@@ -45,7 +45,7 @@ Necesitarás haber instalado lilypond y frescobaldi antes de poder importar el a
 
 Este proyecto contiene un archivo xml de por ahora seis (6) fragmentos que se pueden importar directamente en el gestor de fragmentos de código de frescobaldi. Los snipets actuales se nombran en español, pero podría hacer una versión con nombres en inglés si se desea o es necesario. Estos son:
 
-* coda como marca de ensayo: coloca un símbolo de coda en una instrucción de texto de marcado donde se encuentra actualmente el cursor de edición.
+* coda como marca de ensayo: coloca un símbolo de coda en una instrucción de texto de marcado donde se encuentra actualmente el cursor de edición. Se puede sustituir la palabra coda por segno o cualquier otro síbmolo musical que se necesite dentro del código generado.
 * encerrar el texto seleccionado en una marca de ensayo moderna: Esto solo coloca un bloque de marcado y un bloque de cuadro alrededor del texto seleccionado en el cursor de edición. Esto se hace porque normalmente, las cajas alrededor de las letras que indican una sección de canción como A, B, y así sucesivamente se entienden más claramente por músicos que ven.
 * Importación midi de melodías para hojas guía: Esta es una plantilla de lilypond. Tiene el término midi en él porque utiliza el grabador que completa la terminación de las notas, por lo que las notas que se salgan al final del compás se ligan automáticamente, pero por desgracia esto no funciona bien en absoluto. Aún así, incluye secciones para escribir acordes, una melodía y letras para que pueda ser utilizada para crear hojas de guía al instante. 
  * indicar  la agrupación del pulso: esta es sólo una manera de ahorrar tecleo, de modo que el cursor se coloca donde se colocan los números en el paréntesis del código lilypond, como 3 2. Por ejemplo, esta agrupación se utiliza comúnmente en el Merengue venezolano que tiene un compás compuesto de cinco octavos, en el que el primer pulso tiene tres corcheas y el segundo pulso tiene 2.
