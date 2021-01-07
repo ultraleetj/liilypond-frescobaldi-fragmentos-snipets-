@@ -13,6 +13,42 @@
   whether a snippet is new or updated.
 -->
 
+
+  
+<snippet id="n147135">
+<title>bassline begin</title>
+<shortcuts />
+<body>-*- menu: blocks;
+&lt;&lt; { % continue main melody
+ \ottava #1 % retain original octave
+$SELECTION
+   }</body>
+</snippet>
+
+<snippet id="n000461">
+<title>bassline end</title>
+<shortcuts />
+<body>-*- menu: blocks;
+% bass line
+      \new Staff \with {
+      \remove "Time_signature_engraver"
+      alignBelowContext = #"main"
+      fontSize = #-3
+      \override StaffSymbol.staff-space = #(magstep -3)
+      \override StaffSymbol.thickness = #(magstep -3)
+      %firstClef = ##f
+      \clef "bass_8"
+    }
+{
+% recommended: lower music three octaves.
+$SELECTION
+%end bass line
+&gt;&gt;  %back to main melody
+\ottava #0 %back to original octave, recommended: move music up three octaves
+'''
+</body>
+</snippet>
+
 <snippet id="n665384">
 <title>coda como marca de ensayo</title>
 <shortcuts />
