@@ -1,6 +1,6 @@
 SetWorkingDir %A_ScriptDir%
 switch=0 ;Used to facilitate toggling hotkey status
-;The following line reads from the numpad-keys.ini file
+	;The following line reads from the numpad-keys.ini file
 IniRead, myTime, numpad-keys.ini, Options, myTime
 ;If the ini file does not exist a reminder beep every 30 seconds is set
 IfNotExist numpad-keys.ini
@@ -21,12 +21,12 @@ numpadIns::Send es
 >+NumpadIns::R
 >+NumpadEnd::SendRaw 1
 >+NumpadDown::SendRaw 2
->+NumpadPgDn::sendRaw 4
->+NumpadLeft::sendRaw 8
->+NumpadClear::SendRaw 16
->+NumpadRight::SendRaw 32
->+NumpadHome::SendRaw 64
->+NumpadUp::SendRaw .
+>+NumpadPgDn::sendRaw .
+>+NumpadLeft::sendRaw 4
+>+NumpadClear::SendRaw 8
+>+NumpadRight::SendRaw 16
+>+NumpadHome::SendRaw 32
+>+NumpadUp::SendRaw 64
 >+NumpadPgUp::SendRaw -. 
 NumpadHome::~
 NumpadUp::r
@@ -47,6 +47,10 @@ NumpadSub::SendRaw '
 >+NumpadMult::
 	KeyWait, Shift, T0.5
 	SendRaw )
+	return
+>+NumpadEnter::
+	KeyWait, Shift, T0.5
+	Send {end}{space}
 	return
 
 #z::
@@ -84,7 +88,7 @@ Gui, add, text, vtimeprompt, Choose duration of active program reminders
 Gui, add, Listbox, vduration AltSubmit choose%myTime%, None|15 seconds|30 seconds| 1 minute|2 minutes
 Gui, Add, Button, gSavetime ,Save settings
 Gui, Add, Text, ,A list of reassigned keys follows. Make sure numpad is off.
-Gui, Add, Listbox, ,windows plus z: enable and disable (pause) script|windows plus shift plus z: quit script|windows plus h: show this help screen|notes c to e numbers 1, 2, 3|notes f through b numbers 4, 5, 6 and plus symbol|numpad insert or zero adds flats (es)|numpad 9 adds sharps (is)|whole, half ETC. down to 64th notes: right shift plus 1 to 7|dot for notes: right shift numpad 8|stacatto (dash and dot): right shift numpad9|rest: numpad 8|whole measure rest: right shift numpad zero||chords (insert and place cursor between <> symbols): right shift and plus symbol|raise octave: numpad minus|lower octave: shift numpad minus|regular tie: numpad 7|phrasing slurs: right shift numpad slash and multiply|space: numpad enter
+Gui, Add, Listbox, ,windows plus z: enable and disable (pause) script|windows plus shift plus z: quit script|windows plus h: show this help screen|notes c to e numbers 1, 2, 3|notes f through b numbers 4, 5, 6 and plus symbol|numpad insert or zero adds flats (es)|numpad 9 adds sharps (is)|whole, half quarter: right shift plus 1, 2, 4|eighth, 16th.. 64th: right shift and  numbers 4 to 8|dot for notes: right shift numpad 3|stacatto (dash and dot): right shift numpad9|rest: numpad 8|whole measure rest: right shift numpad zero||chords (insert and place cursor between <> symbols): right shift and plus symbol|end chords (press end key and type a space): shift plus numpad enter|raise octave: numpad minus|lower octave: shift numpad minus|regular tie: numpad 7|phrasing slurs: right shift numpad slash and multiply|space: numpad enter
 Gui, Add, Button, default, OK
 Gui, Add, Button, ,Close
 Gui, Show
