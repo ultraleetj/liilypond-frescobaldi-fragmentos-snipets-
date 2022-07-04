@@ -33,6 +33,14 @@ Similarly dotted rhythms can be entered with a dot, so typing gesl.w will produc
 ges8. 16 
 If you wish to have more combos or snipets available or have some of your own and want to share them you can try opening an issue or contacting me. The file for importing them is named li-combos.json and you can find it in the table above. 
 
+## the autohotkey ly keypad script
+
+Inspired by a post on the GNU facebook group for lilypond on another project which announces a physical lilypond keypad, I realized that I do not use my computer's numeric keypad as much as I wanted, so I decided to give it some novelty and hopefully more use. When it is off, the keys are remapped to enter notes, and when the right shift is pressed which is closest to the numpad, these keys will enter rhythm values. other keys enter flats, sharps, slurs, ties and rests and change the octaves and the enter key is remapped to the space key. The idea is that you can produce lilypond input quickly with just one hand.
+The program can be turned on or off, or be closed completely,  it also reminds you if you have the script active using short beeps (time is configurable) and has every key explained in the first help screen or windows that comes up. it will create a small configuration file but it is still fully portable. When it finds no configuration file it will use the default 30 second reminder.
+
+The script is uploaded both compiled as a windows executable along with its source code.
+Please note, if you are using NVDA, you might wish to install the [numpad nav mode add on](https://addons.nvda-project.org/addons/numpadNavMode.en.html) to be able to use this script effectively. UNfortunately I know of no option to replicate this in other screen readers that take advantage of the numeric keypad when it is off.
+
 
 ## sources
 
@@ -72,6 +80,14 @@ c4 des16 8 16
 De manera similar, los ritmos con puntillo se pueden ingresar con un punto, por lo que escribir gesl.w produce:
 ges8. 16
 Si se desea tener más combos o snipets disponibles o compartir algunos propios que hayan creado, creen un nuevo tiquete en git o pueden ponerse en contacto conmigo. El archivo para importarlos se llama Li-Combos.json y puede encontrarse en la tabla mencionada anteriormente.
+
+## El script Autohotkey ly
+
+Inspirado en una publicación en el grupo de Facebook de GNU Lilypond que habla  de otro proyecto que anuncia un teclado físico de LilyPond, me di cuenta de que no uso el teclado numérico de mi computador tanto como quisiera, así que decidí darle algo de novedad y, con suerte, pueda empezar a usarlo mucho más. Cuando el teclado numérico está apagado, las teclas se reasignan para ingresar notas, y cuando el shift derecho está presionado (que es el que normalmente está más cerca del teclado numérico) estas teclas ingresarán valores rítmicos. Otras teclas ingresan ligaduras normales, ligaduras de expresión y silencios, cambian las octavas, ingresan bemoles y sostenidos  y la tecla ENTER se reasigna a la tecla espacio. La idea es que se pueda producir sintaxis básica de lilypond rápidamente con una sola mano.
+El programa se puede activar o desactivar, o cerrarse por completo, también recuerda si está el script activo con un par de pitidos (el tiempo es configurable) y tiene todas las teclas explicadas en la primera ventana o pantalla de ayuda. Está en inglés pero puedo traducirlo si se desea. Creará un pequeño archivo de configuración pero aún es completamente portátil. Cuando no encuentre un archivo de configuración, se usará el valor predeterminado de recordatorios de 30 segundos.
+
+He subido  el programa tanto compilado como ejecutable de Windows junto con su código fuente.
+Si se está utilizando NVDA, es posible que se desee instalar el [complemento numpad nav mode](https://addons.nvda-project.org/addons/numpadNavMode.es.html) para poder usar el script de manera efectiva. Desafortunadamente, no conozco ninguna opción para replicar esto en otros lectores de pantalla que aprovechen el teclado numérico cuando está apagado.
 
 ## Fuentes
 
